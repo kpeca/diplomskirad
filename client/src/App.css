@@ -7,6 +7,10 @@
   height: 80vh;
   
 }
+
+a{
+  text-decoration: none !important;
+}
 h1{
   color: red;
 }
@@ -21,8 +25,44 @@ h5{
   color : #000;
 }
 
-/* styling signin page */
+td > a:nth-child(1) {
+  
+  border-radius: 4px;
+  padding: 10px;
+  background: green;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  opacity:0.8;
+}
+td > a:nth-child(2) {
+  
+  border-radius: 4px;
+  padding: 10px;
+  background: red;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: transform 20ms ease-in;
+}
+td > a:hover {
+  transform: scale(1.1) !important;
+  opacity: 1;
+}
 
+tr:nth-child(odd){
+  background: rgb(180, 178, 178);
+}
+/* styling signin page */
+td:last-child{
+ 
+  margin: 10px auto;
+  
+  background-color: white;
+  border: 0px;
+
+}
 .card-signin {
 
   

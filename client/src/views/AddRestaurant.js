@@ -74,7 +74,7 @@ export const AddRestaurant = () => {
       <div className="container">
        <div className="card-signin input-field">
                 <h2>Add restaurant</h2>
-                <input
+                <input 
                 type="text"
                 placeholder="Name"
                 value={name}
@@ -100,16 +100,17 @@ export const AddRestaurant = () => {
                 /> */}
 
  
-                  <div class="input-field col s12">
-                    <select
-                    onChange={(e) => setType(e.target.value)}>
-                      <option value="" disabled selected>Choose type</option>
-                      <option value="1">Restoran</option>
-                      <option value="2">Kafana</option>
-                      <option value="3">Brza Hrana</option>
-                      <option value="3">Picerija</option>
-                    </select>
-                  </div>
+                  <select class="form-control form-control-lg"
+                  value={type}
+                  onChange={(e) => setType(e.target.value)}>
+                    <option defaultValue> Restoran</option>
+                    <option > Kafana</option>
+                    <option > Picerija</option>
+                    <option > Palačinkarnica</option>
+                    <option > Pekara</option>
+                    <option > Kafić</option>
+                    <option > Brza hrana</option>
+                  </select>
                <div className="file-field input-field">
                 <div className="btn #ef5350 red lighten-1">
                   <span>upload</span>

@@ -3,7 +3,7 @@ import './TypeSearch.css'
 export const TypeSearch = () => {
 
   const [restaurants, setRestaurants] = useState([]);
-  const [filteredRestaurants, setFilteredRestaurants] = useState("");
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     useEffect(() => {
         fetch('/all', {
           method: "get",
@@ -14,7 +14,7 @@ export const TypeSearch = () => {
         }  )
         .then(res=> res.json())
         .then(data => {
-          console.log(data)
+        // console.log(data)
          setRestaurants(data)
         })
     },[])

@@ -42,7 +42,7 @@ router.post('/addrestaurant', requireLogin, (req,res) => {
 })
 
 //ruta za prikaz svih restorana
-router.get('/all', (req,res) => {
+router.get('/all',  (req,res) => {
     Restaurant.find()
     //.populate("postedBy")
     .then(p => {
@@ -54,7 +54,7 @@ router.get('/all', (req,res) => {
 })
 
 //ruta za prikaz restorana ulogovanog korisnika
-router.get('/myrestaurants',requireLogin, (req,res) =>{
+router.get('/myrestaurants', (req,res) =>{
     Restaurant.find({postedBy: req.user._id})
     .populate("PostedBy","_id name")
     .then(myrestaurants => {
@@ -66,7 +66,7 @@ router.get('/myrestaurants',requireLogin, (req,res) =>{
 })
 
 //ruta za prikaz odredjenog restorana
-router.get('/restaurants/:id', requireLogin, (req,res) => {
+router.get('/restaurants/:id',  (req,res) => {
     Restaurant.findById(req.params.id)
     .then((restaurant) => {
         res.json(restaurant)
@@ -77,7 +77,7 @@ router.get('/restaurants/:id', requireLogin, (req,res) => {
 })
 
 //ruta za brisanje restorana
-router.delete('/restaurants/:id', requireLogin,authRole(ROLE.ADMIN), (req,res) => {
+router.delete('/restaurant/:id',  (req,res) => {
     Restaurant.findByIdAndDelete(req.params.id)
     .then(() => {
         res.json("Restaurant deleted")

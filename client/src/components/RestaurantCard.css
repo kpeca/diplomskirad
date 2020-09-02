@@ -16,6 +16,7 @@
 }
 .card-rest:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 .card-rest > img {
     

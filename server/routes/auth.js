@@ -111,9 +111,24 @@ router.put('/user/:id', requireLogin, (req,res) => {
     })
 })
 
+//ruta za prikaz svih korisnika
+router.get('/allusers',  (req,res) => {
+    User.find()
+    //.populate("postedBy")
+    .then(u => {
+        res.json({users: u})
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+})
+
+
 //ruta za brisanje korisnika
-router.delete('/user/:id', requireLogin, authRole(ROLE.ADMIN), (req,res) => {
-    User.findByIdAndDelete(req.params.id)
+router.delete('/user/:id',   (req,res) => {
+    const id = req.params.id;
+    console.log(id);
+    User.findByIdAndRemove(req.params.id)
     .then(() => {
         res.json("User deleted")
     })

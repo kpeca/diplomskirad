@@ -1,9 +1,11 @@
-POST http://localhost:5000/signin
+POST http://localhost:5000/signup
 Content-Type: application/json
 
 {
-    
-"email:": "aleksandar.kresojevic@gmail.com",
-"password" : "aleksandar123"
+"role" : "admin",    
+"email": "admin@admin.com",
+"password" : "admin123",
+"name" : "Admin",
+"surname" : "Admin"
 
 }

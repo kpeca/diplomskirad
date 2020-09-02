@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link, useHistory} from 'react-router-dom'
 import M from 'materialize-css'
+import 'materialize-css'
+import 'materialize-css/dist/css/materialize.min.css'
 
 
 export const Signup = () => {
@@ -37,6 +39,8 @@ export const Signup = () => {
             }
         })
     }
+
+   
     return (
         <div className="container">
             <div className="card-signin input-field">
@@ -74,7 +78,19 @@ export const Signup = () => {
                 </Link>
             </div>
         </div>
-       
+//         <div className = "container">
+//         <div class="row">
+//     <form class="col s12">
+//       <div class="row">
+//         <div class="input-field col s6">
+//           <i class="material-icons prefix">mode_edit</i>
+//           <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+//           <label for="icon_prefix2">First Name</label>
+//         </div>
+//       </div>
+//     </form>
+//   </div>
+//              </div>
     )
 }
 export default Signup

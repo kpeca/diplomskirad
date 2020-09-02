@@ -21,7 +21,7 @@ export function Navbar() {
     const renderList = () => {
       if(state){
         if(state.role ==='basic'){
-          console.log("radi")
+         // console.log("radi")
           return [ 
             <li><Link to="/myrestaurants">Moji restorani</Link></li>,
             <li><Link to="/addrestaurant">Dodaj restoran</Link></li>,
@@ -35,6 +35,7 @@ export function Navbar() {
         ]}
         if(state.role ==='admin') {
           return[
+            <li><Link to="/myrestaurants">Moji restorani</Link></li>,
           <li><Link to="/addrestaurant">Dodaj restoran</Link></li>,
             <li><Link to="/admin">Admin Stranica</Link></li>,
             <li>
